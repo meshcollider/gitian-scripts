@@ -8,7 +8,10 @@ git checkout v${VERSION}
 popd
 
 pushd ./gitian.sigs
+git checkout master
 git pull
+git branch meshcollider_v{$VERSION}
+git checkout meshcollider_v{$VERSION}
 popd
 
 mkdir build-v{$VERSION}
